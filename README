@@ -1,0 +1,3 @@
+1. Download the script file
+2. Make it executable with the command "chmod +x download_windows_vm.sh"
+3. Run the script and pass the desired path for the resulting QEMU image as an argument: "./download_windows_vm.sh /var/lib/libvirt/images/"

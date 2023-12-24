@@ -1,0 +1,9 @@
+# Ignore all .vmdk files
+*.vmdk
+
+# Ignore all .qcow and .qcow2 files
+*.qcow
+*.qcow2
+
+# Ignore all .zip files
+*.zip
