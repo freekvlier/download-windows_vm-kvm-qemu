@@ -41,7 +41,7 @@ QEMU_IMAGE="${BASE_NAME}.qcow2"
 
 # Convert the VMware image to QEMU/KVM format
 echo "Converting VMware image ($VMDK_FILE) to QEMU/KVM format ($QEMU_IMAGE)..."
-# qemu-img convert -O qcow2 $VMDK_FILE $QEMU_IMAGE
+qemu-img convert -O qcow2 $VMDK_FILE $QEMU_IMAGE
 
 # Move the resulting QEMU image to the specified location
 echo "Moving resulting image to ${RESULTING_PATH}/${QEMU_IMAGE}..."
