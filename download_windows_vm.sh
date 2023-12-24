@@ -45,7 +45,7 @@ qemu-img convert -O qcow2 $VMDK_FILE $QEMU_IMAGE
 
 # Move the resulting QEMU image to the specified location
 echo "Moving resulting image to ${RESULTING_PATH}/${QEMU_IMAGE}..."
-mv $QEMU_IMAGE "${RESULTING_PATH}/${QEMU_IMAGE}"
+sudo mv $QEMU_IMAGE "${RESULTING_PATH}/${QEMU_IMAGE}"
 
 # Clean up: remove the zip and extracted VMDK file
 echo "Cleaning up..."
