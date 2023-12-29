@@ -2,7 +2,7 @@
 
 ## Overview
 
-This script automates the process of downloading a Windows VMware image, converting it to a QEMU/KVM compatible format, and moving the resulting image to a specified directory. It's designed for Ubuntu systems and utilizes `qemu-img` for conversion.
+This script, `download_windows_vm.sh`, automates the process of downloading a Windows VMware image, converting it to a QEMU/KVM compatible format, and moving the resulting image to a specified directory. It's designed for Ubuntu systems and utilizes `qemu-img` for conversion.
 
 ## Prerequisites
 
@@ -22,13 +22,13 @@ This script automates the process of downloading a Windows VMware image, convert
 
 ## Usage
 
-To use the script, you need to provide the destination path for the converted QEMU image as an argument.
+The script should be provided with the destination path for the converted QEMU image. The default location for QEMU images is typically `/var/lib/libvirt/images/`. Use the script as follows:
 
 ```bash
-sudo ./convert_vm.sh /path/to/resulting.qcow2
+sudo ./download_windows_vm.sh /var/lib/libvirt/images/
 ```
 
-Replace `/path/to/resulting.qcow2` with the actual path where you want the converted image to be stored.
+Replace the path with your specific desired destination if it differs from the default.
 
 ### Parameters
 
@@ -54,3 +54,15 @@ If you encounter permission issues, especially when moving the converted image t
 - You have sudo privileges.
 - The target directory has the correct permissions.
 - Your user is part of the necessary group (commonly `libvirt` or `kvm`).
+
+## Contributing
+
+Contributions to improve the script or documentation are welcome. Please feel free to fork the repository and submit pull requests.
+
+## License
+
+Specify the license under which this script is distributed, if applicable.
+
+## Contact
+
+Provide your contact information or the way users can get help with issues related to the script.
