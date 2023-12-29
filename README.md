@@ -1,4 +1,4 @@
-$ Automatic Windows VM downloader for QEMU (VMware to QEMU Conversion)
+# Automatic Windows VM downloader for QEMU (VMware to QEMU Conversion)
 
 ## Overview
 
