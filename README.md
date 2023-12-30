@@ -1,4 +1,5 @@
-# Automatic Windows VM downloader for QEMU (VMware to QEMU Conversion)
+
+# Automatic Windows VM Downloader for QEMU (VMware to QEMU Conversion)
 
 ## Overview
 
@@ -12,13 +13,20 @@ This script, `download_windows_vm.sh`, automates the process of downloading a Wi
 
 ## Installation
 
-1. **Install Required Packages**: The script requires `qemu-utils` and `unzip`. These will be installed automatically when you run the script, but you can install them manually using:
-    ```bash
-    sudo apt-get update
-    sudo apt-get install qemu-utils unzip
-    ```
+**Install Git**: Before cloning the repository, ensure you have Git installed. If not, install it using the following command:
 
-2. **Download the Script**: Clone the repository or download the script directly to your desired directory.
+```bash
+sudo apt-get update
+sudo apt-get install git
+```
+
+**Download the Script**: Clone the repository or download the script directly to your desired directory using the following command:
+
+```bash
+git clone [Repository URL]
+```
+
+Replace `[Repository URL]` with the actual URL of the repository where the script is hosted.
 
 ## Usage
 
@@ -49,8 +57,15 @@ Replace the path with your specific desired destination if it differs from the d
 
 ## Troubleshooting
 
-If you encounter permission issues, especially when moving the converted image to `/var/lib/libvirt/images/`, ensure that:
+- **VM crashes with a blue screen error ("thread exception not handled")**: This issue may arise due to CPU configuration. Try setting the CPU model to "hypervisor default" instead of "host passthrough".
+  
+- **Permission Issues**: If you encounter permission issues, especially when moving the converted image to `/var/lib/libvirt/images/`, ensure that:
+    - You have sudo privileges.
+    - The target directory has the correct permissions.
+    - Your user is part of the necessary group (commonly `libvirt` or `kvm`).
 
-- You have sudo privileges.
-- The target directory has the correct permissions.
-- Your user is part of the necessary group (commonly `libvirt` or `kvm`).
+- **Package Installation Failures**: If the script fails to automatically install required packages, you may need to install them manually. The necessary packages are `qemu-utils`, `unzip`, and `wget`. Install them using:
+    ```bash
+    sudo apt-get update
+    sudo apt-get install qemu-utils unzip wget
+    ```
