@@ -23,10 +23,8 @@ sudo apt-get install git
 **Download the Script**: Clone the repository or download the script directly to your desired directory using the following command:
 
 ```bash
-git clone [Repository URL]
+git clone https://github.com/freekvlier/download-windows_vm-kvm-qemu.git
 ```
-
-Replace `[Repository URL]` with the actual URL of the repository where the script is hosted.
 
 ## Usage
 
