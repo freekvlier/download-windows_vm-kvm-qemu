@@ -53,6 +53,24 @@ Replace the path with your specific desired destination if it differs from the d
 - Run the script in a controlled environment first to confirm it behaves as expected.
 - Always be cautious when running scripts with `sudo` or as a root user.
 
+## Post-Installation: Installing Virtio Drivers and QEMU Guest Agent
+
+After the Windows VM is set up, you'll need to install Virtio drivers and the QEMU guest agent to ensure optimal performance and functionality. These can be obtained from the following URL:
+
+```text
+https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/stable-virtio/virtio-win.iso
+```
+
+**Steps to Install Virtio Drivers:**
+
+1. Download the Virtio drivers ISO from the link above.
+2. Mount the `.iso` file to your VM as a virtual CD/DVD.
+3. Inside the VM, navigate to the mounted CD/DVD drive.
+4. Run the appropriate executable files to install the Virtio drivers.
+5. Follow the on-screen instructions to complete the installation.
+
+**Note**: The QEMU guest agent is also included in this ISO and can be installed for enhanced performance and management features.
+
 ## Troubleshooting
 
 - **VM crashes with a blue screen error ("thread exception not handled")**: This issue may arise due to CPU configuration. Try setting the CPU model to "hypervisor default" instead of "host passthrough".
