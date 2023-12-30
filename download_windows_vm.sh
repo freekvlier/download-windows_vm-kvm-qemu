@@ -12,7 +12,7 @@ fi
 
 # Update and install required packages
 echo "Updating system and installing required packages..."
-sudo apt-get update && sudo apt-get install -y qemu-utils unzip
+sudo apt-get update && sudo apt-get install -y qemu-utils unzip wget
 
 # Define download URL and zip file name
 DOWNLOAD_URL="https://aka.ms/windev_VM_vmware"
